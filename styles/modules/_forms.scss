@@ -33,27 +33,28 @@
 .select-group {
   position: relative;
 
-  &.is-active {
-    .form-select {
-      border-color: $blue;
-    }
-
-    .ic-caret {
-      color: $blue;
-    }
-  }
-
-  .form-select {
-    padding-right: 40px;
-    text-overflow: ellipsis;
-  }
-
   .ic-caret {
     @include pos-center-y;
     right: 8px;
     font-size: 24px;
     color: $tertiary;
     pointer-events: none;
+    background-color: hotpink;
+
+    &.is-active {
+      .form-select {
+        border-color: $blue;
+      }
+
+      .ic-caret {
+        color: $blue;
+      }
+    }
+
+    .form-select {
+      padding-right: 40px;
+      text-overflow: ellipsis;
+    }
   }
 }
 

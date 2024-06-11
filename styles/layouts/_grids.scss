@@ -23,12 +23,12 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
 
   // .col-sm-1 .col-md-2 .col-lg-3
   [class^='col-'] {
-    padding: 0 calc($gutter / 2);
+    padding: 0 $gutter / 2;
   }
 
   @for $i from 1 through $sm-columns {
-    col-sm-#{$i} {
-      width: $i / $sm-columns * 100%;
+    .col-sm-#{$i} {
+      width: percentage($i / $sm-columns);
     }
   }
 
@@ -36,8 +36,8 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     max-width: $md-max-container;
     padding: 0 $md-margin;
     @for $i from 1 through $md-columns {
-      col-md-#{$i} {
-        width: $i / $md-columns * 100%;
+      .col-md-#{$i} {
+        width: percentage($i / $md-columns);
       }
     }
   }
@@ -46,7 +46,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     max-width: $lg-max-container;
     padding: 0;
     @for $i from 1 through $lg-columns {
-      col-lg-#{$i} {
+      .col-lg-#{$i} {
         width: ($lg-unit + $gutter) * $i;
       }
     }
