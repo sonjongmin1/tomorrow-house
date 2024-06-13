@@ -11,13 +11,3 @@
     }
   }
 }
-
-.section {
-  @include responsive(T) {
-    color: red;
-  }
-
-  @include responsive(D) {
-    color: blue;
-  }
-}

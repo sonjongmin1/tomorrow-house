@@ -1,4 +1,4 @@
-@mixin text-style-12($color: false) {
+@mixin text-style-12() {
   font-size-12: $font-size-12;
   line-height-12: $line-height-12;
   letter-spacing-12: $letter-spacing-12;

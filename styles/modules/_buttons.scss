@@ -22,7 +22,7 @@
   }
 }
 
-.btn-fill-secondary {
+.btn-secondary {
   @extend %btn-base;
   color: $primary;
   background-color: $border;
@@ -50,7 +50,6 @@
   color: $primary;
   background-color: transparent;
   transition: color 200ms ease-in-out;
-  border: 1px solid $blue;
 
   &:not(:disabled):hover {
     color: $secondary;

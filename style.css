@@ -397,9 +397,9 @@ template {
 * {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
-  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 html {
@@ -445,17 +445,6 @@ ul,
 ol {
   padding-left: 0;
   list-style: none;
-}
-
-@media screen and (min-width: 768px) {
-  .section {
-    color: red;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section {
-    color: blue;
-  }
 }
 
 .tag-gray, .tag-green, .tag-red {
@@ -610,7 +599,7 @@ ol {
   font-weight: 400;
 }
 
-.btn-ghost, .btn-outlined, .btn-fill-secondary, .btn-primary {
+.btn-ghost, .btn-outlined, .btn-secondary, .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -618,7 +607,7 @@ ol {
   font-weight: 700;
   border-radius: 4px;
 }
-.btn-ghost:disabled, .btn-outlined:disabled, .btn-fill-secondary:disabled, .btn-primary:disabled {
+.btn-ghost:disabled, .btn-outlined:disabled, .btn-secondary:disabled, .btn-primary:disabled {
   cursor: not-allowed;
   opacity: 0.4;
 }
@@ -632,12 +621,12 @@ ol {
   background-color: #3186c4;
 }
 
-.btn-fill-secondary {
+.btn-secondary {
   color: #3f4150;
   background-color: #e0e2e7;
   transition: background-color 200ms ease-in-out;
 }
-.btn-fill-secondary:not(:disabled):hover {
+.btn-secondary:not(:disabled):hover {
   background-color: #b2b3b9;
 }
 
@@ -655,7 +644,6 @@ ol {
   color: #3f4150;
   background-color: transparent;
   transition: color 200ms ease-in-out;
-  border: 1px solid #3da5f5;
 }
 .btn-ghost:not(:disabled):hover {
   color: #8c8d96;
@@ -702,8 +690,8 @@ ol {
   background-color: #fff;
   border: 1px solid #e0e2e7;
   border-radius: 4px;
-  appearance: none;
   transition: background-color 200ms ease-in-out;
+  appearance: none;
 }
 .form-select::placeholder,
 .form-input::placeholder {
@@ -722,25 +710,24 @@ ol {
 .select-group {
   position: relative;
 }
+.select-group .form-select {
+  padding-right: 40px;
+  text-overflow: ellipsis;
+}
 .select-group .ic-caret {
   position: absolute;
-  left: 50%;
+  top: 50%;
   transform: translateY(-50%);
   right: 8px;
   font-size: 24px;
   color: #b2b3b9;
   pointer-events: none;
-  background-color: hotpink;
 }
 .select-group .ic-caret.is-active .form-select {
   border-color: #3da5f5;
 }
 .select-group .ic-caret.is-active .ic-caret {
   color: #3da5f5;
-}
-.select-group .ic-caret .form-select {
-  padding-right: 40px;
-  text-overflow: ellipsis;
 }
 
 .input-group {
@@ -751,8 +738,9 @@ ol {
 }
 .input-group .ic-search {
   position: absolute;
-  left: 50%;
+  top: 50%;
   transform: translateY(-50%);
+  left: 10px;
   font-size: 20px;
   color: #8c8d96;
 }
