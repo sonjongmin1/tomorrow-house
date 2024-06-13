@@ -7,8 +7,8 @@
   background-color: $white;
   border: 1px solid $border;
   border-radius: 4px;
-  appearance: none;
   transition: background-color 200ms ease-in-out;
+  appearance: none;
 
   &::placeholder {
     color: $tertiary;
@@ -33,13 +33,17 @@
 .select-group {
   position: relative;
 
+  .form-select {
+    padding-right: 40px;
+    text-overflow: ellipsis;
+  }
+
   .ic-caret {
     @include pos-center-y;
     right: 8px;
     font-size: 24px;
     color: $tertiary;
     pointer-events: none;
-    background-color: hotpink;
 
     &.is-active {
       .form-select {
@@ -49,11 +53,6 @@
       .ic-caret {
         color: $blue;
       }
-    }
-
-    .form-select {
-      padding-right: 40px;
-      text-overflow: ellipsis;
     }
   }
 }
@@ -68,6 +67,7 @@
 
   .ic-search {
     @include pos-center-y;
+    left: 10px;
     font-size: 20px;
     color: $secondary;
   }
