@@ -1,10 +1,37 @@
 .my-menu {
+  $button-size: 32px;
   $tooltip-size: 12px;
 
   position: relative;
 
+  &-button {
+    width: $button-size;
+    height: $button-size;
+    overflow: hidden;
+    background-image: url('./assets/images/img-user-default.png');
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 3px solid $white;
+    border-radius: 50%;
+    transition: border-color 200ms ease-in-out;
+
+    &:hover,
+    &.is-active {
+      border-color: $blue;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   &-content {
     @include pos-center-x;
+    top: $button-size + $tooltip-size + 8px;
     border-radius: 4px;
     box-shadow: $dropdown-shadow;
 
@@ -17,7 +44,7 @@
       height: 0;
       border-top: $tooltip-size solid transparent;
       border-right: 10px solid transparent;
-      border-bottom: $tooltip-size solid $white;
+      border-bottom: $tooltip-size solid transparent;
       border-left: 10px solid transparent;
       content: '';
     }
@@ -44,6 +71,7 @@
     a,
     button {
       @include flexbox(start);
+      @include text-style(16, $primary);
       width: 100%;
       height: 44px;
       padding: 0 8px;
